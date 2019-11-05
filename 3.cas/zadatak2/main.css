@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-template-areas:  
+        "prva prva prva prva"
+        "drugi prva prva treca"
+        "drugi treca prva cetvri"
+        "drugi treca prvi cetvri";
+}
+
+.parent .child {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item1 {
+    grid-area: prva;
+}
+
+
+.item2 {
+    grid-area: druga;
+}
+
+
+.item3 {
+    grid-area: treca;
+}
+
+
+.item4 {
+    grid-area: cetvrta;
+}

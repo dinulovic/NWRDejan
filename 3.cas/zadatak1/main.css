@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: #fff;
+}
+
+header {
+    background-color: red;
+}
+
+footer {
+    background-color: black;
+}
+
+nav {
+    background-color: purple;
+}
+
+article {
+    background-color: pink;
+}
+
+.right {
+    background-color: orange;
+}
+
+section {
+    background-color: green;
+}
+
+header,
+footer,
+nav,
+section,
+article,
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 4px;
+}
+
+main {
+    display: flex;
+    flex: 5;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
