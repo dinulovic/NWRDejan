@@ -1,0 +1,57 @@
+/*
+Odnosi se na parent: 
+
+grid-template-columns - definisanje kolona kroz px, %, fr, auto
+grid-template-rows -   definisanje reda kroz px, %, fr, auto
+
+
+Odnosi se na child: 
+grid-column-start - definise se startna linija za odredjeni element  / span(default: 1), brojevi, name    
+grid-column-end - definise se krajnja linija za odredjeni elemnt   / span(default: 1), brojevi, name
+
+grid-row-start - definise se startna linija za odredjeni element  / span(default: 1), brojevi, name
+grid-row-end - definise se krajnja linija za odredjeni elemnt / span(default: 1), brojevi, name
+
+grid-row: 1 / 2;
+grid-column: 1 / 4;
+
+grid-row-start / grid-column-start / grid-row-end / grid-column-end 
+
+
+Grid container - glavni wraper
+Gird item - svi elementi koji se nalazi u okviru grida
+Grid line - predstavljaju linije
+Grid cell - celije u okviru linija
+Grid track - horizontalna ili vertikalna traka
+Grid area - skup celiija
+Grid gap - razmak izmedju celija
+
+*/
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: [prvi-row-start] 1fr [druga-row-start] 1fr [treca-row-end];
+    grid-template-columns: [prvi-col-start] 1fr [drugi-col-start] 1fr [treca-col-start] 1fr [cetvrta-col-end];
+}
+
+.grid-item1 {
+    background-color: blue;
+    grid-area: prvi-row-start / prvi-col-start / druga-row-start / drugi-col-start;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 40px;
+}
+
+.grid-item2 {
+    /* grid-area: 2 / 3 / 3 / 4; */
+    grid-area: druga-row-start / treca-col-start / treca-row-end / cetvrta-col-end;
+    background-color: red;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 40px;
+}

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+        "prvi prvi prvi"
+        "drugi drugi treci"
+        "span span treci"
+        
+    ;
+
+}
+
+.grid-container>div {
+    background-color: rebeccapurple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    color: #fff;
+}
+
+.grid-item1 {
+    grid-area: prvi;
+}
+
+.grid-item2 {
+    grid-area: drugi;
+}
+
+.grid-item3 {
+    grid-area: treci;
+}
+
+/* .grid-item4 {
+    grid-area: cetvrti;
+}
+
+.grid-item5 {
+    grid-area: peti;
+}
+
+.grid-item6 {
+    grid-area: sesti;
+}
+
+.grid-item7 {
+    grid-area: sedmi;
+}
+
+.grid-item8 {
+    grid-area: osmi;
+}
+
+.grid-item9 {
+    grid-area: deveti;
+} */

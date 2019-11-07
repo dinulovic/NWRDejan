@@ -18,6 +18,19 @@ grid-column-end - definise se krajnja linija za odredjeni elemnt   / span(defaul
 grid-row-start - definise se startna linija za odredjeni element  / span(default: 1), brojevi, name
 grid-row-end - definise se krajnja linija za odredjeni elemnt / span(default: 1), brojevi, name
 
+grid-row: 1 / 2;
+grid-column: 1 / 4;
+
+grid-row-start / grid-column-start / grid-row-end / grid-column-end 
+
+
+Grid container - glavni wraper
+Gird item - svi elementi koji se nalazi u okviru grida
+Grid line - predstavljaju linije
+Grid cell - celije u okviru linija
+Grid track - horizontalna ili vertikalna traka
+Grid area - skup celiija
+Grid gap - razmak izmedju celija
 
 */
 

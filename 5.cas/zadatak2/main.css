@@ -1,0 +1,29 @@
+.grid-container {
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px;
+    grid-auto-columns: 200px;
+    grid-auto-flow: column;
+    grid-gap: 5px;
+}
+
+.grid-container-2 {
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+    grid-row-gap: 10px;
+    grid-column-gap: 15px;
+}
+
+.grid-container > div,
+.grid-container-2 > div {
+    background-color: rebeccapurple;
+    /* margin: 5px; */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
