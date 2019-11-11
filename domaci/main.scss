@@ -1,0 +1,168 @@
+/*
+*   ======================= Colors ==================================
+*/
+$black: #414141;
+$white: #fff;
+$border: #a8cdee;
+$icons: #455a71;
+$nav: #00b1ff;
+$overlay: #367ac6;
+
+/*
+*   ======================= General styles ==================================
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+
+ul {
+    list-style: none;
+    display: flex;
+
+    li {
+        margin: 8px;
+
+        a {
+            color: $nav;
+            font-weight: 700;
+            text-decoration: none;
+
+            img {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+/*
+*   ======================= Navigation ==================================
+*/
+nav {
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "logo navigation";
+
+
+    .logo {
+        grid-area: logo;
+    }
+
+
+    .navigation {
+        grid-area: navigation;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+}
+
+/*
+*   ======================= Home ==================================
+*/
+
+#home {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas: "mainImg ipadImg officeImg"
+                        "mainImg entrepreneurImg entrepreneurImg";
+    .image {
+        grid-area: mainImg;
+        position: relative;
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba($overlay, .73);
+            padding: 32px;
+            h2 {
+                color: $white;
+                font-size: 3.5rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    img.ipad-img {
+        grid-area: ipadImg;
+    } 
+
+    img.office-img {
+        grid-area: officeImg;
+    }
+
+    img.entrepreneur-img {
+        grid-area: entrepreneurImg;
+    }
+}
+
+/*
+*   ======================= Service ==================================
+*/
+#service {
+    padding: 80px 0;
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 48px;
+        font-weight: 300;
+        color: #707070;
+    }
+    .service-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .icon {
+                border: 2px solid #a8cdee;
+                border-radius: 10px;
+                padding: 16px;
+                // box-shadow: -10 23 30 $black;
+                img {
+                    width: 100%;
+                }
+            }
+
+            h3 {
+                margin-top: 16px;
+                font-size: 2rem;
+                color: #707070;
+            }
+        }
+    }
+}
+
+/*
+*   ======================= Footer ==================================
+*/
+
+footer {
+    padding: 24px;
+    background-color: $black;
+    p {
+        margin: 0;
+        color: $white;
+        text-align: center;
+    }
+}
