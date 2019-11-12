@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  color: #3b48f7; }
+
+.alert, h1 {
+  color: red;
+  border: 3px solid red;
+  padding: 5px 15px;
+  margin-top: 24px; }
+
+a.btn {
+  display: inline-block;
+  color: #3b48f7;
+  border: 1px solid #3b48f7;
+  padding: 10px 20px;
+  text-decoration: none; }
+  a.btn:hover {
+    background-color: #3b48f7;
+    color: #fff; }
+
+#list2 {
+  list-style: none; }
+  #list2.alert, h1#list2 {
+    border: 1px solid red; }
+  #list2:hover li.list-item4 {
+    background-color: aqua; }
+  #list2 li {
+    border: 1px solid black;
+    margin: 4px; }
+    #list2 li:hover {
+      background-color: red; }
+    #list2 li:nth-child(2) {
+      background-color: #3b48f7; }
+
+/*# sourceMappingURL=main.css.map */

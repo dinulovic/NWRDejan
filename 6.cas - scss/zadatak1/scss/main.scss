@@ -1,0 +1,63 @@
+//Variables
+$primary_color: #3b48f7;
+$white: #fff;
+
+//Mixin
+@mixin dugme {
+    color: $primary_color;
+    border: 1px solid $primary_color;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: $primary_color;
+    @extend .alert;
+}
+
+.alert {
+    color: red;
+    border: 3px solid red;
+    padding: 5px 15px;
+    margin-top: 24px;
+}
+
+a.btn {
+    display: inline-block;
+    @include dugme;
+
+    &:hover {
+        background-color: $primary_color;
+        color: $white;
+    }
+}
+
+
+
+#list2 {
+    list-style: none;
+    &.alert {
+        border: 1px solid red;
+    }
+
+    &:hover li.list-item4 {
+        background-color: aqua;
+    }
+    li {
+        border: 1px solid black;
+        margin: 4px;
+
+        &:hover {
+            background-color: red;
+        }
+        &:nth-child(2) {
+            background-color: $primary_color;
+        }
+    }
+}
+
