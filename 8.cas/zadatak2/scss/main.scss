@@ -1,0 +1,37 @@
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+html,
+body {
+
+
+    @include mobile {
+        background-color: red;
+        .box {
+            color: #000;
+            font-size: 20px;
+        }
+    }
+
+    @include tablet {
+        background-color: blue;
+        .box {
+            color: #fff;
+            font-size: 40px;
+        }
+    }
+
+    @include desktop {
+        background-color: green;
+    }
+}

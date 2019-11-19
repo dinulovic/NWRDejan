@@ -1,0 +1,18 @@
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    @extend %box_content;
+    @include border1($primary, 3px);
+}
+
+.box2 {
+    @extend %box_content;
+    @include border1($alert, 1px);
+}
