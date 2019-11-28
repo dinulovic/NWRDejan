@@ -1,0 +1,28 @@
+
+//Media query mobile
+
+@mixin mobile {
+    @media only screen and (max-width: #{$mobile - 1px}) {
+        @content;
+    }
+}
+
+
+
+//Media query tablet
+
+@mixin tablet {
+    @media only screen and (min-width: #{$mobile}) and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+
+
+//Media query desktop
+
+@mixin desktop {
+    @media only screen and (min-width: #{$tablet}) and (max-width: #{$desktop}) {
+        @content;
+    }
+}
