@@ -1,0 +1,322 @@
+@import 'varibles';
+@import 'mixins';
+@import 'extends';
+/*
+*   General styles
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+section {
+    padding: 80px 0;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: $blue;
+    transition: all .3s ease-in-out;
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 1200px;
+}
+
+
+.title-white {
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background-color: rgba($blue, .8);
+    color: $white;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.title-blue {
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background-color: rgba($blue, .2);
+    color: $blue;
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-block;
+}
+
+/*
+*   Buttons
+*/
+
+.btn {
+    border-radius: 100px;
+    font-size: 16px;
+    text-transform: capitalize;
+    width: 150px;
+    height: 50px;
+    padding: 16px;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-white-outline {
+    background-color: transparent;
+    border: 1px solid $white;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $white;
+        border: 1px solid $white;
+        color: $black;
+    }
+}
+
+.btn-white {
+    background-color: $white;
+    border: 1px solid $white;
+    color: $black;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+        border: 1px solid $white;
+        color: $white;
+    }
+}
+
+.btn-blue {
+    background-color: $blue;
+    border: 1px solid $blue;
+    color: $white;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: transparent;
+        border: 1px solid $blue;
+        color: $blue;
+    }
+}
+
+/*
+*   Grid container
+*/
+
+#app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "nav nav nav nav nav"
+        "home home home home home"
+        "service service service service service"
+        "about about about about about "
+        "whyUs whyUs whyUs whyUs whyUs"
+        "partners partners partners partners partners"
+        "footer footer footer footer footer";
+
+    nav {
+        grid-area: nav;
+        background-color: $black;
+        padding: 24px 0;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                img {}
+            }
+
+            .menu {
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        a {
+                            color: $white;
+
+                            &:hover {
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .sign-in {
+                a {}
+            }
+        }
+    }
+
+    #home {
+        grid-area: home;
+        background-image: linear-gradient(rgba($black, .5), rgba($black, .5)), url('../images/home.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+        .home-content {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            max-width: 600px;
+
+            h1 {
+                color: $white;
+                font-size: 50px;
+                font-weight: 700;
+                text-transform: capitalize;
+                margin-bottom: 24px;
+            }
+
+            p {
+                color: $gray;
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
+
+            .home-buttons {
+                display: flex;
+
+                a {
+                    margin: 16px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                }
+            }
+        }
+    }
+
+    #service {
+        grid-area: service;
+        background-color: $bgGray;
+
+        .service-content {
+            text-align: center;
+
+            h2 {
+                font-size: 32px;
+                text-transform: capitalize;
+            }
+
+            .service-info {
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+
+                .item {
+                    margin: 16px;
+                    padding: 16px;
+                    box-shadow: 0 2px 3px rgba(44, 52, 59, 0.15);
+                    background-color: $white;
+                    display: flex;
+                    flex-direction: column;
+                    flex-basis: 30%;
+                    border-radius: 10px;
+
+                    i {
+                        color: $blue;
+                        font-size: 50px;
+                    }
+
+                    h3 {
+                        font-size: 26px;
+                        margin-bottom: 16px;
+                    }
+
+                    p {
+                        color: $gray;
+                    }
+                }
+            }
+        }
+    }
+
+    #about {
+        grid-area: about;
+        background-color: $blue;
+
+        .about-content {
+            display: flex;
+
+            .image {
+                flex: 1;
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            .description {
+                flex: 1;
+                padding: 0 32px;
+                color: $white;
+                h3 {
+                    font-size: 28px;
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    margin: 16px 0;
+                }
+
+                ul {
+                    margin-left: 24px;
+                    li {
+
+                    }
+                }
+
+                a.btn {
+                    margin-top: 24px;
+                }
+
+            }
+        }
+    }
+
+    #why-us {
+        grid-area: whyUs;
+    }
+
+    #partners {
+        grid-area: partners;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+}

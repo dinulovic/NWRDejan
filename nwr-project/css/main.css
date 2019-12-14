@@ -1,0 +1,259 @@
+/*
+*   General styles
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif; }
+
+section {
+  padding: 80px 0; }
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: #3375EC;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1200px; }
+
+.title-white {
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background-color: rgba(51, 117, 236, 0.8);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: inline-block; }
+
+.title-blue {
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background-color: rgba(51, 117, 236, 0.2);
+  color: #3375EC;
+  text-transform: uppercase;
+  font-size: 16px;
+  display: inline-block; }
+
+/*
+*   Buttons
+*/
+.btn {
+  border-radius: 100px;
+  font-size: 16px;
+  text-transform: capitalize;
+  width: 150px;
+  height: 50px;
+  padding: 16px;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.btn-white-outline {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff; }
+  .btn-white-outline:hover, .btn-white-outline:focus, .btn-white-outline:active {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: #2C343B; }
+
+.btn-white {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #2C343B; }
+  .btn-white:hover, .btn-white:focus, .btn-white:active {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff; }
+
+.btn-blue {
+  background-color: #3375EC;
+  border: 1px solid #3375EC;
+  color: #fff; }
+  .btn-blue:hover, .btn-blue:focus, .btn-blue:active {
+    background-color: transparent;
+    border: 1px solid #3375EC;
+    color: #3375EC; }
+
+/*
+*   Grid container
+*/
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-areas: "nav nav nav nav nav" "home home home home home" "service service service service service" "about about about about about " "whyUs whyUs whyUs whyUs whyUs" "partners partners partners partners partners" "footer footer footer footer footer"; }
+  #app nav {
+    grid-area: nav;
+    background-color: #2C343B;
+    padding: 24px 0; }
+    #app nav .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      #app nav .container .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #app nav .container .menu ul li a {
+          color: #fff; }
+          #app nav .container .menu ul li a:hover {
+            color: #3375EC; }
+  #app #home {
+    grid-area: home;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(44, 52, 59, 0.5)), to(rgba(44, 52, 59, 0.5))), url("../images/home.jpg");
+    background-image: linear-gradient(rgba(44, 52, 59, 0.5), rgba(44, 52, 59, 0.5)), url("../images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; }
+    #app #home .home-content {
+      height: 100vh;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      max-width: 600px; }
+      #app #home .home-content h1 {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 24px; }
+      #app #home .home-content p {
+        color: #cacaca;
+        font-size: 16px;
+        margin-bottom: 24px; }
+      #app #home .home-content .home-buttons {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+        #app #home .home-content .home-buttons a {
+          margin: 16px; }
+          #app #home .home-content .home-buttons a:first-child {
+            margin-left: 0; }
+  #app #service {
+    grid-area: service;
+    background-color: #F9F8F8; }
+    #app #service .service-content {
+      text-align: center; }
+      #app #service .service-content h2 {
+        font-size: 32px;
+        text-transform: capitalize; }
+      #app #service .service-content .service-info {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        #app #service .service-content .service-info .item {
+          margin: 16px;
+          padding: 16px;
+          -webkit-box-shadow: 0 2px 3px rgba(44, 52, 59, 0.15);
+                  box-shadow: 0 2px 3px rgba(44, 52, 59, 0.15);
+          background-color: #fff;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -ms-flex-preferred-size: 30%;
+              flex-basis: 30%;
+          border-radius: 10px; }
+          #app #service .service-content .service-info .item i {
+            color: #3375EC;
+            font-size: 50px; }
+          #app #service .service-content .service-info .item h3 {
+            font-size: 26px;
+            margin-bottom: 16px; }
+          #app #service .service-content .service-info .item p {
+            color: #cacaca; }
+  #app #about {
+    grid-area: about;
+    background-color: #3375EC; }
+    #app #about .about-content {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      #app #about .about-content .image {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1; }
+        #app #about .about-content .image img {
+          border-radius: 10px; }
+      #app #about .about-content .description {
+        -webkit-box-flex: 1;
+            -ms-flex: 1;
+                flex: 1;
+        padding: 0 32px;
+        color: #fff; }
+        #app #about .about-content .description h3 {
+          font-size: 28px;
+          margin-bottom: 16px; }
+        #app #about .about-content .description p {
+          margin: 16px 0; }
+        #app #about .about-content .description ul {
+          margin-left: 24px; }
+        #app #about .about-content .description a.btn {
+          margin-top: 24px; }
+  #app #why-us {
+    grid-area: whyUs; }
+  #app #partners {
+    grid-area: partners; }
+  #app footer {
+    grid-area: footer; }
+
+/*# sourceMappingURL=main.css.map */
