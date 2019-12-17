@@ -7,8 +7,7 @@ function create() {
         naziv_skole: "Pavle Ilic Veljko - Radujevac",
         adresa: "Bez broja",
         godina_osnivanja: 1956,
-        smerovi: [
-            {
+        smerovi: [{
                 naziv_smera: "Drustveno-jezicki",
                 broj_studenta: 57,
                 predmeti: ["Srpski jezik", "Istorija", "Geografija", "Fizicko"]
@@ -27,7 +26,7 @@ function create() {
     }
 
     console.log(skola);
-    
+
 }
 
 function list_all() {
